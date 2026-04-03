@@ -1,0 +1,19 @@
+{
+  "name": "witnessops-governed-recon",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "mcp"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs && npm --workspace mcp test",
+    "contract:check": "node ./scripts/contract-check.mjs",
+    "dev": "npm --workspace mcp run dev",
+    "start": "npm --workspace mcp run start"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}
