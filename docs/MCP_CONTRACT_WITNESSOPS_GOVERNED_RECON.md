@@ -6,8 +6,8 @@ WitnessOps Governed Recon is a passive-only public MCP/app surface for bounded r
 
 This document explains the v1 contract. It does not override the canonical files in:
 
-- [`schemas/`](/Users/sovereign/github/witnessops-governed-recon/schemas)
-- [`tools/`](/Users/sovereign/github/witnessops-governed-recon/tools)
+- [`schemas/`](../schemas)
+- [`tools/`](../tools)
 
 ## Tool List
 
@@ -25,12 +25,12 @@ The v1 public surface exposes exactly five tools:
 
 Canonical object schemas:
 
-- [`DomainClaim.schema.json`](/Users/sovereign/github/witnessops-governed-recon/schemas/objects/DomainClaim.schema.json)
-- [`ScopeDraft.schema.json`](/Users/sovereign/github/witnessops-governed-recon/schemas/objects/ScopeDraft.schema.json)
-- [`ReconRun.schema.json`](/Users/sovereign/github/witnessops-governed-recon/schemas/objects/ReconRun.schema.json)
-- [`ExposureSummary.schema.json`](/Users/sovereign/github/witnessops-governed-recon/schemas/objects/ExposureSummary.schema.json)
-- [`VPBExport.schema.json`](/Users/sovereign/github/witnessops-governed-recon/schemas/objects/VPBExport.schema.json)
-- [`ReceiptDescriptor.schema.json`](/Users/sovereign/github/witnessops-governed-recon/schemas/objects/ReceiptDescriptor.schema.json)
+- [`DomainClaim.schema.json`](../schemas/objects/DomainClaim.schema.json)
+- [`ScopeDraft.schema.json`](../schemas/objects/ScopeDraft.schema.json)
+- [`ReconRun.schema.json`](../schemas/objects/ReconRun.schema.json)
+- [`ExposureSummary.schema.json`](../schemas/objects/ExposureSummary.schema.json)
+- [`VPBExport.schema.json`](../schemas/objects/VPBExport.schema.json)
+- [`ReceiptDescriptor.schema.json`](../schemas/objects/ReceiptDescriptor.schema.json)
 
 Frozen v1 rules:
 
