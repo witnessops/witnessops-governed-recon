@@ -1,0 +1,21 @@
+{
+  "run_id": "rr_4T6V8W2Y",
+  "seed_domain": "example.com",
+  "generated_at": "2026-04-03T12:30:00Z",
+  "assets": [
+    {
+      "asset": "app.example.com",
+      "asset_type": "hostname",
+      "findings": [
+        {
+          "finding_id": "f_3A5C7E9G",
+          "title": "TLS certificate expires soon",
+          "severity": "medium",
+          "confidence": "high",
+          "source_type": "certificate_observation",
+          "evidence_ref": "ev_2H4J6L8N"
+        }
+      ]
+    }
+  ]
+}

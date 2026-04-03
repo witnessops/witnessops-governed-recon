@@ -1,0 +1,12 @@
+{
+  "tool": "witnessops.approve_scope_and_start_recon",
+  "input": {
+    "scope_id": "sc_APPROVALREQ1",
+    "approval": {
+      "confirmed": true,
+      "approver_email": "approver@example.com"
+    },
+    "idempotency_key": "idem-approval-required"
+  },
+  "expected_code": "E_APPROVAL_REQUIRED"
+}

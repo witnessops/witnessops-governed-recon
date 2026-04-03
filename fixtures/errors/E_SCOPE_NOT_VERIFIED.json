@@ -1,0 +1,17 @@
+{
+  "tool": "witnessops.draft_scope",
+  "input": {
+    "claim_id": "dc_SCOPEPENDING1",
+    "seed_domain": "example.com",
+    "methods": [
+      "dns_resolution"
+    ],
+    "exclusions": [],
+    "time_window": {
+      "start": "2026-04-03T12:00:00Z",
+      "end": "2026-04-04T12:00:00Z"
+    },
+    "jurisdiction": "IE"
+  },
+  "expected_code": "E_SCOPE_NOT_VERIFIED"
+}

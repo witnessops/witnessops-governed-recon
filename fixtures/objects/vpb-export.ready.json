@@ -1,0 +1,9 @@
+{
+  "export_id": "vpb_5B7D9F1H",
+  "run_id": "rr_4T6V8W2Y",
+  "status": "ready",
+  "bundle_format": "vaultmesh-proof-bundle/v1",
+  "download_url": "https://example.com/downloads/vpb_5B7D9F1H.json",
+  "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "generated_at": "2026-04-03T12:31:00Z"
+}

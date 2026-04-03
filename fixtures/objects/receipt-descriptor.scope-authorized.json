@@ -1,0 +1,8 @@
+{
+  "receipt_class": "scope_authorized",
+  "receipt_id": "rcpt_scope_authorized_001",
+  "status": "recorded",
+  "created_at": "2026-04-03T12:14:00Z",
+  "hash": "abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789",
+  "uri": "https://example.com/receipts/rcpt_scope_authorized_001"
+}

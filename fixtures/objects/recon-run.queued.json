@@ -1,0 +1,11 @@
+{
+  "run_id": "rr_1Q3W5E7R",
+  "scope_id": "sc_7P2M4N8R",
+  "status": "queued",
+  "started_at": null,
+  "completed_at": null,
+  "delivery": {
+    "summary_ready": false,
+    "vpb_ready": false
+  }
+}

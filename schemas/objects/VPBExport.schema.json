@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/objects/VPBExport.schema.json",
+  "title": "VPBExport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "export_id",
+    "run_id",
+    "status",
+    "bundle_format",
+    "download_url",
+    "sha256",
+    "generated_at"
+  ],
+  "properties": {
+    "export_id": {
+      "type": "string",
+      "pattern": "^vpb_[A-Za-z0-9]+$"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^rr_[A-Za-z0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "generating",
+        "failed"
+      ]
+    },
+    "bundle_format": {
+      "const": "vaultmesh-proof-bundle/v1"
+    },
+    "download_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

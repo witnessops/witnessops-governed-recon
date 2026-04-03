@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/tools/verify_domain_control.input.schema.json",
+  "title": "verify_domain_control input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "pattern": "^dc_[A-Za-z0-9]+$"
+    },
+    "expected_domain": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+    }
+  }
+}

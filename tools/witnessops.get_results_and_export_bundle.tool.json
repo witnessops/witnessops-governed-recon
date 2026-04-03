@@ -1,0 +1,12 @@
+{
+  "name": "witnessops.get_results_and_export_bundle",
+  "title": "Get Results and Export Verification Bundle",
+  "description": "Fetch the current exposure summary and verification-facing VPB export metadata for a governed recon run.",
+  "inputSchemaPath": "schemas/tools/get_results_and_export_bundle.input.schema.json",
+  "outputSchemaPath": "schemas/tools/get_results_and_export_bundle.output.schema.json",
+  "annotations": {
+    "readOnlyHint": true
+  },
+  "stateChanging": false,
+  "confirmationRequired": false
+}

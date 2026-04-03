@@ -1,0 +1,12 @@
+{
+  "name": "witnessops.draft_scope",
+  "title": "Draft Passive Scope",
+  "description": "Create a passive-only governed recon scope draft tied to a verified domain claim.",
+  "inputSchemaPath": "schemas/tools/draft_scope.input.schema.json",
+  "outputSchemaPath": "schemas/tools/draft_scope.output.schema.json",
+  "annotations": {
+    "readOnlyHint": false
+  },
+  "stateChanging": true,
+  "confirmationRequired": true
+}

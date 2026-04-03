@@ -1,0 +1,10 @@
+{
+  "scope_id": "sc_7P2M4N8R",
+  "approval": {
+    "confirmed": true,
+    "approver_email": "ciso@example.com",
+    "approver_name": "Alice Approver",
+    "approval_note": "Approved for passive-only recon."
+  },
+  "idempotency_key": "idem-approve-0001"
+}

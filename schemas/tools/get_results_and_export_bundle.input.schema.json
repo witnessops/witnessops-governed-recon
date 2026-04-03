@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/tools/get_results_and_export_bundle.input.schema.json",
+  "title": "get_results_and_export_bundle input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "pattern": "^rr_[A-Za-z0-9]+$"
+    },
+    "include_bundle": {
+      "type": "boolean"
+    },
+    "include_receipt_summary": {
+      "type": "boolean"
+    }
+  }
+}

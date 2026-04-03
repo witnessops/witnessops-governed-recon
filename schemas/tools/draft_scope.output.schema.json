@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/tools/draft_scope.output.schema.json",
+  "title": "draft_scope output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scope_draft",
+    "receipts"
+  ],
+  "properties": {
+    "scope_draft": {
+      "$ref": "../objects/ScopeDraft.schema.json"
+    },
+    "receipts": {
+      "type": "array",
+      "items": {
+        "$ref": "../objects/ReceiptDescriptor.schema.json"
+      }
+    }
+  }
+}

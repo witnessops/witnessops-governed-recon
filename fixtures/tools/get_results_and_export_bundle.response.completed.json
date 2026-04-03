@@ -1,0 +1,60 @@
+{
+  "run_id": "rr_4T6V8W2Y",
+  "status": "completed",
+  "summary": {
+    "run_id": "rr_4T6V8W2Y",
+    "seed_domain": "example.com",
+    "generated_at": "2026-04-03T12:30:00Z",
+    "assets": [
+      {
+        "asset": "app.example.com",
+        "asset_type": "hostname",
+        "findings": [
+          {
+            "finding_id": "f_3A5C7E9G",
+            "title": "TLS certificate expires soon",
+            "severity": "medium",
+            "confidence": "high",
+            "source_type": "certificate_observation",
+            "evidence_ref": "ev_2H4J6L8N"
+          }
+        ]
+      }
+    ]
+  },
+  "receipt_summary": [
+    {
+      "receipt_class": "offsec_execution_outcome",
+      "receipt_id": "rcpt_offsec_execution_outcome_001",
+      "status": "ready",
+      "created_at": "2026-04-03T12:30:00Z",
+      "hash": "6666666666666666666666666666666666666666666666666666666666666666",
+      "uri": "https://example.com/receipts/rcpt_offsec_execution_outcome_001"
+    },
+    {
+      "receipt_class": "evidence_manifest",
+      "receipt_id": "rcpt_evidence_manifest_001",
+      "status": "ready",
+      "created_at": "2026-04-03T12:30:30Z",
+      "hash": "7777777777777777777777777777777777777777777777777777777777777777",
+      "uri": "https://example.com/receipts/rcpt_evidence_manifest_001"
+    },
+    {
+      "receipt_class": "vpb_export_ready",
+      "receipt_id": "rcpt_vpb_export_ready_001",
+      "status": "ready",
+      "created_at": "2026-04-03T12:31:00Z",
+      "hash": "8888888888888888888888888888888888888888888888888888888888888888",
+      "uri": "https://example.com/receipts/rcpt_vpb_export_ready_001"
+    }
+  ],
+  "bundle": {
+    "export_id": "vpb_5B7D9F1H",
+    "run_id": "rr_4T6V8W2Y",
+    "status": "ready",
+    "bundle_format": "vaultmesh-proof-bundle/v1",
+    "download_url": "https://example.com/downloads/vpb_5B7D9F1H.json",
+    "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "generated_at": "2026-04-03T12:31:00Z"
+  }
+}

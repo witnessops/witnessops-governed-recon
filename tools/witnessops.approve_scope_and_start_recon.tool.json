@@ -1,0 +1,12 @@
+{
+  "name": "witnessops.approve_scope_and_start_recon",
+  "title": "Approve Scope and Start Governed Recon",
+  "description": "Capture explicit approval for a passive-only recon scope and start a governed recon run.",
+  "inputSchemaPath": "schemas/tools/approve_scope_and_start_recon.input.schema.json",
+  "outputSchemaPath": "schemas/tools/approve_scope_and_start_recon.output.schema.json",
+  "annotations": {
+    "readOnlyHint": false
+  },
+  "stateChanging": true,
+  "confirmationRequired": true
+}

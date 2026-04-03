@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/objects/DomainClaim.schema.json",
+  "title": "DomainClaim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "domain",
+    "requestor",
+    "verification_method",
+    "status",
+    "created_at",
+    "expires_at"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "pattern": "^dc_[A-Za-z0-9]+$"
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+    },
+    "requestor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "business_email",
+        "display_name",
+        "organization"
+      ],
+      "properties": {
+        "business_email": {
+          "type": "string",
+          "format": "email"
+        },
+        "display_name": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "organization": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": [
+        "dns_txt",
+        "email_link"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "verified",
+        "failed",
+        "expired"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

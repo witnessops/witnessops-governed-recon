@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/objects/ReceiptDescriptor.schema.json",
+  "title": "ReceiptDescriptor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "receipt_class",
+    "receipt_id",
+    "status",
+    "created_at"
+  ],
+  "properties": {
+    "receipt_class": {
+      "type": "string",
+      "enum": [
+        "domain_control_claim",
+        "domain_control_verified",
+        "scope_draft",
+        "scope_authorized",
+        "offsec_recon_snapshot",
+        "offsec_execution_outcome",
+        "evidence_manifest",
+        "vpb_export_ready"
+      ]
+    },
+    "receipt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "recorded",
+        "ready",
+        "failed",
+        "blocked"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "tool": "witnessops.approve_scope_and_start_recon",
+  "input": {
+    "scope_id": "sc_STARTFAIL1",
+    "approval": {
+      "confirmed": true,
+      "approver_email": "approver@example.com"
+    },
+    "idempotency_key": "idem-start-failed"
+  },
+  "expected_code": "E_RECON_START_FAILED"
+}

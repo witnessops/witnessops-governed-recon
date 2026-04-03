@@ -1,0 +1,12 @@
+{
+  "name": "witnessops.verify_domain_control",
+  "title": "Verify Domain Control",
+  "description": "Validate domain-control proof and bind the verified challenge to the requestor claim.",
+  "inputSchemaPath": "schemas/tools/verify_domain_control.input.schema.json",
+  "outputSchemaPath": "schemas/tools/verify_domain_control.output.schema.json",
+  "annotations": {
+    "readOnlyHint": false
+  },
+  "stateChanging": true,
+  "confirmationRequired": true
+}

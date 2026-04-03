@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/tools/approve_scope_and_start_recon.output.schema.json",
+  "title": "approve_scope_and_start_recon output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run",
+    "receipts"
+  ],
+  "properties": {
+    "run": {
+      "$ref": "../objects/ReconRun.schema.json"
+    },
+    "receipts": {
+      "type": "array",
+      "items": {
+        "$ref": "../objects/ReceiptDescriptor.schema.json"
+      }
+    }
+  }
+}

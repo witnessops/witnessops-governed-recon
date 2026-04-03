@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/objects/ExposureSummary.schema.json",
+  "title": "ExposureSummary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "seed_domain",
+    "generated_at",
+    "assets"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "pattern": "^rr_[A-Za-z0-9]+$"
+    },
+    "seed_domain": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "asset",
+          "asset_type",
+          "findings"
+        ],
+        "properties": {
+          "asset": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 253
+          },
+          "asset_type": {
+            "type": "string",
+            "enum": [
+              "hostname",
+              "domain",
+              "ip_address",
+              "url",
+              "service"
+            ]
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "finding_id",
+                "title",
+                "severity",
+                "confidence",
+                "source_type",
+                "evidence_ref"
+              ],
+              "properties": {
+                "finding_id": {
+                  "type": "string",
+                  "pattern": "^f_[A-Za-z0-9]+$"
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "severity": {
+                  "type": "string",
+                  "enum": [
+                    "critical",
+                    "high",
+                    "medium",
+                    "low",
+                    "info"
+                  ]
+                },
+                "confidence": {
+                  "type": "string",
+                  "enum": [
+                    "high",
+                    "medium",
+                    "low",
+                    "inconclusive"
+                  ]
+                },
+                "source_type": {
+                  "type": "string",
+                  "enum": [
+                    "dns_resolution",
+                    "certificate_observation",
+                    "subdomain_discovery",
+                    "http_fingerprint",
+                    "email_posture",
+                    "service_banner_observation"
+                  ]
+                },
+                "evidence_ref": {
+                  "type": "string",
+                  "pattern": "^ev_[A-Za-z0-9]+$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "tool": "witnessops.verify_domain_control",
+  "input": {
+    "claim_id": "dc_PENDINGWAIT1",
+    "expected_domain": "pending.example.com"
+  },
+  "expected_code": "E_DOMAIN_VERIFICATION_PENDING"
+}

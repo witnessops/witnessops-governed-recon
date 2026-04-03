@@ -1,0 +1,12 @@
+{
+  "name": "witnessops.start_domain_verification",
+  "title": "Start Domain Verification",
+  "description": "Start proof-of-control for a domain and return verification instructions.",
+  "inputSchemaPath": "schemas/tools/start_domain_verification.input.schema.json",
+  "outputSchemaPath": "schemas/tools/start_domain_verification.output.schema.json",
+  "annotations": {
+    "readOnlyHint": true
+  },
+  "stateChanging": false,
+  "confirmationRequired": false
+}

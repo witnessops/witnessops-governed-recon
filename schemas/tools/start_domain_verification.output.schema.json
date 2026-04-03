@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/tools/start_domain_verification.output.schema.json",
+  "title": "start_domain_verification output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim",
+    "instructions",
+    "receipts"
+  ],
+  "properties": {
+    "claim": {
+      "$ref": "../objects/DomainClaim.schema.json"
+    },
+    "instructions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "value"
+      ],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "dns_txt",
+            "email_link"
+          ]
+        },
+        "record_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ttl_seconds": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "receipts": {
+      "type": "array",
+      "items": {
+        "$ref": "../objects/ReceiptDescriptor.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/objects/ReconRun.schema.json",
+  "title": "ReconRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "scope_id",
+    "status",
+    "started_at",
+    "completed_at",
+    "delivery"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "pattern": "^rr_[A-Za-z0-9]+$"
+    },
+    "scope_id": {
+      "type": "string",
+      "pattern": "^sc_[A-Za-z0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "running",
+        "completed",
+        "failed",
+        "aborted"
+      ]
+    },
+    "started_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "completed_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "delivery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary_ready",
+        "vpb_ready"
+      ],
+      "properties": {
+        "summary_ready": {
+          "type": "boolean"
+        },
+        "vpb_ready": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

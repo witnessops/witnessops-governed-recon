@@ -1,0 +1,20 @@
+{
+  "claim_id": "dc_9K1X3P7Q",
+  "seed_domain": "example.com",
+  "methods": [
+    "dns_resolution",
+    "certificate_observation",
+    "subdomain_discovery",
+    "http_fingerprint",
+    "email_posture",
+    "service_banner_observation"
+  ],
+  "exclusions": [
+    "vpn.example.com"
+  ],
+  "time_window": {
+    "start": "2026-04-03T12:00:00Z",
+    "end": "2026-04-04T12:00:00Z"
+  },
+  "jurisdiction": "IE"
+}

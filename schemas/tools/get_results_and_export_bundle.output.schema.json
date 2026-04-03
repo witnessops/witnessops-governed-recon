@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/tools/get_results_and_export_bundle.output.schema.json",
+  "title": "get_results_and_export_bundle output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "status",
+    "summary",
+    "receipt_summary",
+    "bundle"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "pattern": "^rr_[A-Za-z0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "running",
+        "completed",
+        "failed",
+        "aborted"
+      ]
+    },
+    "summary": {
+      "oneOf": [
+        {
+          "$ref": "../objects/ExposureSummary.schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "receipt_summary": {
+      "type": "array",
+      "items": {
+        "$ref": "../objects/ReceiptDescriptor.schema.json"
+      }
+    },
+    "bundle": {
+      "oneOf": [
+        {
+          "$ref": "../objects/VPBExport.schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

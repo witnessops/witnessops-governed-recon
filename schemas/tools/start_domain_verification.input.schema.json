@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/tools/start_domain_verification.input.schema.json",
+  "title": "start_domain_verification input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domain",
+    "business_email"
+  ],
+  "properties": {
+    "domain": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+    },
+    "business_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "organization": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": [
+        "dns_txt",
+        "email_link"
+      ]
+    }
+  }
+}

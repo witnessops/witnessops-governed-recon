@@ -1,0 +1,11 @@
+{
+  "run_id": "rr_4T6V8W2Y",
+  "scope_id": "sc_7P2M4N8R",
+  "status": "completed",
+  "started_at": "2026-04-03T12:15:00Z",
+  "completed_at": "2026-04-03T12:30:00Z",
+  "delivery": {
+    "summary_ready": true,
+    "vpb_ready": true
+  }
+}

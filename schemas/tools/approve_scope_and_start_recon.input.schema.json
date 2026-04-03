@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/tools/approve_scope_and_start_recon.input.schema.json",
+  "title": "approve_scope_and_start_recon input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scope_id",
+    "approval"
+  ],
+  "properties": {
+    "scope_id": {
+      "type": "string",
+      "pattern": "^sc_[A-Za-z0-9]+$"
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmed",
+        "approver_email"
+      ],
+      "properties": {
+        "confirmed": {
+          "const": true
+        },
+        "approver_email": {
+          "type": "string",
+          "format": "email"
+        },
+        "approver_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "approval_note": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      }
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 120
+    }
+  }
+}
