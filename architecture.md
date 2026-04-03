@@ -10,8 +10,8 @@ It defines the public tool surface, public object model, public documentation su
 
 Canonical public authority lives in:
 
-1. [`schemas/`](/Users/sovereign/github/witnessops-governed-recon/schemas)
-2. [`tools/`](/Users/sovereign/github/witnessops-governed-recon/tools)
+1. [`schemas/`](./schemas)
+2. [`tools/`](./tools)
 
 Everything else is derived:
 
@@ -31,7 +31,7 @@ Everything else is derived:
 
 ## Runtime Shape
 
-The v1 runtime is a Streamable HTTP MCP server in [`mcp/`](/Users/sovereign/github/witnessops-governed-recon/mcp).
+The v1 runtime is a Streamable HTTP MCP server in [`mcp/`](./mcp).
 
 It exists to prove the contract surface, not to claim backend authority. The runtime:
 
