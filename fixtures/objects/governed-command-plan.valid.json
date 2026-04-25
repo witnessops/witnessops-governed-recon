@@ -1,0 +1,35 @@
+{
+  "plan_id": "gcp_ExternalExposure001",
+  "workflow_class_id": "external_ad_exposure_proof_run",
+  "decision_run_id": "run_2026-04-25_external-ad-exposure-001",
+  "scope_approval_id": "scope_external_ad_exposure_001",
+  "execution_mode": "record_only",
+  "active_scanning_allowed": true,
+  "lockout_policy_reviewed": true,
+  "not_performed_statement_path": "evidence/safety/NOT_PERFORMED.md",
+  "approved_targets": [
+    "example.com",
+    "https://www.example.com",
+    "192.0.2.10"
+  ],
+  "commands": [
+    {
+      "command_id": "cmd_AmassPassive001",
+      "template_id": "amass_passive_subdomain_inventory",
+      "target": "example.com",
+      "output_path": "evidence/raw/amass/subdomains.txt"
+    },
+    {
+      "command_id": "cmd_FeroxWeb001",
+      "template_id": "feroxbuster_bounded_web_discovery",
+      "target": "https://www.example.com",
+      "output_path": "evidence/raw/ferox/www-example-com.txt"
+    },
+    {
+      "command_id": "cmd_CmeShares001",
+      "template_id": "crackmapexec_smb_share_mapping",
+      "target": "192.0.2.10",
+      "output_path": "evidence/raw/crackmapexec/smb-shares.txt"
+    }
+  ]
+}
