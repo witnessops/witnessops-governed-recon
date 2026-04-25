@@ -1,0 +1,16 @@
+{
+  "template_id": "amass_passive_subdomain_inventory",
+  "workflow_class_id": "external_ad_exposure_proof_run",
+  "tool_name": "amass",
+  "phase": "passive_inventory",
+  "execution_mode": "record_only",
+  "requires_authority_gate": true,
+  "requires_approved_target": true,
+  "requires_active_scan_approval": false,
+  "requires_lockout_policy": false,
+  "argv_template": ["amass", "enum", "-passive", "-d", "{target}", "-o", "{output_path}"],
+  "forbidden_capabilities": [
+    "out_of_scope_scanning",
+    "unapproved_target_contact"
+  ]
+}

@@ -79,6 +79,10 @@ export function objectFixtureMatrix() {
     ["schemas/objects/ExposureSummary.schema.json", "fixtures/objects/exposure-summary.complete.json"],
     ["schemas/objects/VPBExport.schema.json", "fixtures/objects/vpb-export.ready.json"],
     ["schemas/objects/ReceiptDescriptor.schema.json", "fixtures/objects/receipt-descriptor.scope-authorized.json"],
+    ["schemas/objects/GovernedCommandTemplate.schema.json", "fixtures/objects/governed-command-template.amass-passive.json"],
+    ["schemas/objects/GovernedCommandTemplate.schema.json", "fixtures/objects/governed-command-template.feroxbuster-bounded.json"],
+    ["schemas/objects/GovernedCommandTemplate.schema.json", "fixtures/objects/governed-command-template.cme-shares.json"],
+    ["schemas/objects/GovernedCommandPlan.schema.json", "fixtures/objects/governed-command-plan.valid.json"],
   ];
 }
 

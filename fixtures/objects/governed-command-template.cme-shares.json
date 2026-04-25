@@ -1,0 +1,18 @@
+{
+  "template_id": "crackmapexec_smb_share_mapping",
+  "workflow_class_id": "external_ad_exposure_proof_run",
+  "tool_name": "crackmapexec",
+  "phase": "smb_share_mapping",
+  "execution_mode": "record_only",
+  "requires_authority_gate": true,
+  "requires_approved_target": true,
+  "requires_active_scan_approval": true,
+  "requires_lockout_policy": true,
+  "argv_template": ["crackmapexec", "smb", "{target}", "-u", "{approved_user}", "-p", "{approved_password_ref}", "--shares"],
+  "forbidden_capabilities": [
+    "out_of_scope_scanning",
+    "account_authentication_testing_without_gate",
+    "sensitive_data_extraction",
+    "remote_operation"
+  ]
+}
