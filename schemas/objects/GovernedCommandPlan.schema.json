@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/objects/GovernedCommandPlan.schema.json",
+  "title": "GovernedCommandPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "plan_id",
+    "workflow_class_id",
+    "decision_run_id",
+    "scope_approval_id",
+    "execution_mode",
+    "active_scanning_allowed",
+    "lockout_policy_reviewed",
+    "not_performed_statement_path",
+    "approved_targets",
+    "commands"
+  ],
+  "properties": {
+    "plan_id": {
+      "type": "string",
+      "pattern": "^gcp_[A-Za-z0-9]+$"
+    },
+    "workflow_class_id": {
+      "type": "string",
+      "const": "external_ad_exposure_proof_run"
+    },
+    "decision_run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope_approval_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "execution_mode": {
+      "type": "string",
+      "const": "record_only"
+    },
+    "active_scanning_allowed": {
+      "type": "boolean"
+    },
+    "lockout_policy_reviewed": {
+      "type": "boolean"
+    },
+    "not_performed_statement_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approved_targets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["command_id", "template_id", "target", "output_path"],
+        "properties": {
+          "command_id": {
+            "type": "string",
+            "pattern": "^cmd_[A-Za-z0-9]+$"
+          },
+          "template_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "target": {
+            "type": "string",
+            "minLength": 1
+          },
+          "output_path": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
