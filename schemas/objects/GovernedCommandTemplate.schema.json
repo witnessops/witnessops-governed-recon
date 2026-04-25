@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://witnessops.example/schemas/objects/GovernedCommandTemplate.schema.json",
+  "title": "GovernedCommandTemplate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "template_id",
+    "workflow_class_id",
+    "tool_name",
+    "phase",
+    "execution_mode",
+    "requires_authority_gate",
+    "requires_approved_target",
+    "requires_active_scan_approval",
+    "requires_lockout_policy",
+    "argv_template",
+    "forbidden_capabilities"
+  ],
+  "properties": {
+    "template_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "workflow_class_id": {
+      "type": "string",
+      "const": "external_ad_exposure_proof_run"
+    },
+    "tool_name": {
+      "type": "string",
+      "enum": ["amass", "feroxbuster", "crackmapexec"]
+    },
+    "phase": {
+      "type": "string",
+      "enum": ["passive_inventory", "active_web_discovery", "smb_share_mapping"]
+    },
+    "execution_mode": {
+      "type": "string",
+      "const": "record_only"
+    },
+    "requires_authority_gate": {
+      "type": "boolean",
+      "const": true
+    },
+    "requires_approved_target": {
+      "type": "boolean",
+      "const": true
+    },
+    "requires_active_scan_approval": {
+      "type": "boolean"
+    },
+    "requires_lockout_policy": {
+      "type": "boolean"
+    },
+    "argv_template": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "forbidden_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "uniqueItems": true
+    }
+  }
+}
